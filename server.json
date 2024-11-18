@@ -1,0 +1,84 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 14000,
+      "createdAt": "2024-11-16T12:13:22.326Z"
+    },
+    {
+      "id": "2",
+      "description": "Lanche",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 50,
+      "createdAt": "2024-11-16T19:30:22.326Z"
+    },
+    {
+      "id": "3",
+      "description": "Pizza",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 79,
+      "createdAt": "2024-11-16T19:30:22.326Z"
+    },
+    {
+      "id": "4",
+      "description": "Ignite Rockeseat",
+      "type": "outcome",
+      "category": "Educação",
+      "price": 1980,
+      "createdAt": "2024-11-18T19:30:22.326Z"
+    },
+    {
+      "id": "bbdc",
+      "description": "Costela Paizão",
+      "price": 53,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2024-11-18T10:42:03.395Z"
+    },
+    {
+      "id": "cc81",
+      "description": "Desenvolvimento de App",
+      "price": 2000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2024-11-18T10:47:08.239Z"
+    },
+    {
+      "id": "66ee",
+      "description": "Batata Paizão",
+      "price": 50,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2024-11-18T12:35:46.308Z"
+    },
+    {
+      "id": "358f",
+      "description": "Batata  com Costela Paizão",
+      "price": 50,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2024-11-18T12:37:01.137Z"
+    },
+    {
+      "id": "9eb8",
+      "description": "Criação de um ORM",
+      "price": 20000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2024-11-18T12:55:19.232Z"
+    },
+    {
+      "id": "c5ba",
+      "description": "Zona",
+      "price": 1300,
+      "category": "Diversão",
+      "type": "outcome",
+      "createdAt": "2024-11-18T13:05:05.573Z"
+    }
+  ]
+}

@@ -1,34 +1,42 @@
+import { useContext} from "react";
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
 import { SearchForm } from "./components/SearchForm";
 
 import {PriceHighlight, TransactionsContainer, TransactionsTable} from './styles'
+import { TransactionsContext } from "../../contexts/TransactionContext";
+import { dateFormatter, priceFormatter } from "../../utils/formatter";
+
+interface TransactionsProps {
+    id: number,
+    description: string,
+    type: 'income' | 'outcome',
+    price: number,
+    category: string,
+    createdAt: string
+}
 
 export function Transactions () {
+    const {transactions} = useContext(TransactionsContext)
+
     return <div>
         <Header />
         <Summary />
         
         <TransactionsContainer>
         <SearchForm />
+            <div style={{height: '30rem', overflowY: 'auto'}}>
             <TransactionsTable>
                 <tbody>
-                    <tr>
-                        <td width="50%">Desenvolvimento de site</td>
-                        <td><PriceHighlight variant="income">R$ 12.000,00</PriceHighlight></td>
-                        <td>Venda</td>
-                        <td>13/04/2024</td>
-                    </tr>
-
-                    <tr>
-                        <td width="50%">Hamburguer</td>
-                        <td><PriceHighlight variant="outcome">- R$ 59,00</PriceHighlight></td>
-                        <td>Alimentação</td>
-                        <td>10/04/2024</td>
-                    </tr>
-
+                    {transactions.map(({id, description, type, price, category, createdAt}: TransactionsProps)=> (<tr key={id}>
+                        <td width="50%">{description}</td>
+                        <td><PriceHighlight variant={type}>{priceFormatter.format(price)}</PriceHighlight></td>
+                        <td>{category}</td>
+                        <td>{dateFormatter.format(new Date(createdAt))}</td>
+                    </tr>)) }
                 </tbody>
             </TransactionsTable>
+            </div>
         </TransactionsContainer>
     </div>
 }
